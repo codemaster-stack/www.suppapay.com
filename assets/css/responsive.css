@@ -1,0 +1,205 @@
+/* ===================================
+   RESPONSIVE DESIGN - MOBILE & TABLET
+   =================================== */
+
+/* Tablets and Small Desktops (992px and below) */
+@media (max-width: 992px) {
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hero-content h1 {
+    font-size: 42px;
+  }
+  
+  .section-title {
+    font-size: 36px;
+  }
+  
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  /* Mobile Navigation */
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-content {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: var(--white);
+    flex-direction: column;
+    padding: 40px 20px;
+    transition: left 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+  
+  .nav-content.active {
+    left: 0;
+  }
+  
+  .nav-menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .nav-menu a {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--light-gray);
+    width: 100%;
+  }
+  
+  .nav-right {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .nav-right a {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding: 60px 0 50px;
+  }
+  
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  
+  .hero-subtitle {
+    font-size: 16px;
+  }
+  
+  .social-proof {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .social-text {
+    text-align: center;
+  }
+  
+  /* Features */
+  .features-overview .container {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Why Choose Section */
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Getting Started */
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* CTA Section */
+  .cta-section h2 {
+    font-size: 32px;
+  }
+  
+  .cta-section p {
+    font-size: 16px;
+  }
+  
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+/* Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .logo {
+    height: 32px;
+  }
+  
+  .hero-content h1 {
+    font-size: 26px;
+  }
+  
+  .hero-subtitle {
+    font-size: 14px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .btn-hero {
+    padding: 14px 30px;
+    font-size: 16px;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .feature-card,
+  .why-card,
+  .step-card {
+    padding: 30px 20px;
+  }
+  
+  .feature-icon {
+    font-size: 45px;
+  }
+  
+  .why-icon {
+    font-size: 40px;
+  }
+  
+  .step-number {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+  
+  .faq-question {
+    padding: 20px;
+    font-size: 16px;
+  }
+  
+  .faq-answer p {
+    padding: 0 20px 20px;
+    font-size: 14px;
+  }
+  
+  .footer {
+    padding: 40px 0 20px;
+  }
+  
+  .footer-column h4 {
+    font-size: 16px;
+  }
+}
