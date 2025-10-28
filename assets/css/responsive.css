@@ -130,6 +130,11 @@
   .footer-social {
     justify-content: center;
   }
+
+
+  .account-type-cards {
+                grid-template-columns: 1fr;
+            }
 }
 
 /* Mobile Phones (480px and below) */

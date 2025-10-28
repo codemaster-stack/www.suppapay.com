@@ -1,4 +1,9 @@
 // ===================================
+// MAIN.JS - GLOBAL JAVASCRIPT
+// Used by ALL pages across the app
+// ===================================
+
+// ===================================
 // PAGE LOADER
 // ===================================
 window.addEventListener('load', function() {
@@ -11,7 +16,7 @@ window.addEventListener('load', function() {
       setTimeout(() => {
         pageLoader.style.display = 'none';
       }, 500);
-    }, 500); // Adjust delay as needed (500ms = 0.5 seconds)
+    }, 500);
   }
 });
 
@@ -108,7 +113,7 @@ function hideProcessingMessage() {
 }
 
 // ===================================
-// SIMULATE API CALL WITH LOADING (Example)
+// SIMULATE API CALL WITH LOADING
 // ===================================
 async function simulateApiCall(duration = 2000) {
   return new Promise((resolve) => {
@@ -117,7 +122,6 @@ async function simulateApiCall(duration = 2000) {
     }, duration);
   });
 }
-
 
 // ===================================
 // MOBILE NAVIGATION TOGGLE
@@ -129,8 +133,6 @@ document.addEventListener('DOMContentLoaded', function() {
   if (hamburger && navContent) {
     hamburger.addEventListener('click', function() {
       navContent.classList.toggle('active');
-      
-      // Animate hamburger icon
       this.classList.toggle('active');
     });
     
@@ -154,28 +156,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-});
-
-// ===================================
-// FAQ ACCORDION
-// ===================================
-const faqQuestions = document.querySelectorAll('.faq-question');
-
-faqQuestions.forEach(question => {
-  question.addEventListener('click', function() {
-    const faqItem = this.parentElement;
-    const isActive = faqItem.classList.contains('active');
-    
-    // Close all FAQ items
-    document.querySelectorAll('.faq-item').forEach(item => {
-      item.classList.remove('active');
-    });
-    
-    // Open clicked item if it wasn't already active
-    if (!isActive) {
-      faqItem.classList.add('active');
-    }
-  });
 });
 
 // ===================================
@@ -205,22 +185,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===================================
-// SCROLL TO TOP BUTTON (Optional)
-// ===================================
-// Show/hide scroll to top button
-window.addEventListener('scroll', function() {
-  const scrollBtn = document.getElementById('scrollToTop');
-  
-  if (scrollBtn) {
-    if (window.pageYOffset > 300) {
-      scrollBtn.classList.add('show');
-    } else {
-      scrollBtn.classList.remove('show');
-    }
-  }
-});
-
-// ===================================
 // HEADER SHADOW ON SCROLL
 // ===================================
 window.addEventListener('scroll', function() {
@@ -236,48 +200,7 @@ window.addEventListener('scroll', function() {
 });
 
 // ===================================
-// LAZY LOADING FOR IMAGES (Optional)
-// ===================================
-if ('IntersectionObserver' in window) {
-  const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.dataset.src;
-        img.classList.add('loaded');
-        observer.unobserve(img);
-      }
-    });
-  });
-  
-  const images = document.querySelectorAll('img[data-src]');
-  images.forEach(img => imageObserver.observe(img));
-}
-
-// ===================================
-// ANIMATE ON SCROLL (Optional)
-// ===================================
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver(function(entries) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate');
-    }
-  });
-}, observerOptions);
-
-// Observe elements for animation
-document.addEventListener('DOMContentLoaded', function() {
-  const animateElements = document.querySelectorAll('.feature-card, .why-card, .step-card');
-  animateElements.forEach(el => observer.observe(el));
-});
-
-// ===================================
-// PREVENT FORM SUBMISSION (for now)
+// PREVENT FORM SUBMISSION (for pages without backend)
 // ===================================
 const forms = document.querySelectorAll('form');
 forms.forEach(form => {
@@ -291,5 +214,4 @@ forms.forEach(form => {
 // ===================================
 // CONSOLE MESSAGE
 // ===================================
-console.log('%c SuppaPay Frontend Loaded Successfully! 🚀', 'color: #FF6B00; font-size: 16px; font-weight: bold;');
-console.log('%c Ready to build the backend? Let\'s go! 💪', 'color: #1E3A8A; font-size: 14px;');
+console.log('%c SuppaPay Global Scripts Loaded! 🚀', 'color: #FF6B00; font-size: 16px; font-weight: bold;');
