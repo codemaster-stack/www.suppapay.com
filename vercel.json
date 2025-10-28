@@ -3,7 +3,7 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
-    { "source": "/register", "destination": "/register-step1.html" },
+    { "source": "/register", "destination": "/register.html" },
     { "source": "/login", "destination": "/login.html" },
     { "source": "/dashboard", "destination": "/dashboard.html" },
     { "source": "/personal-kyc", "destination": "/personal-kyc.html" },
