@@ -542,9 +542,17 @@
 
 // ===================================
 // DETECT CURRENT STEP
+// ===================================// ===================================
+// REGISTER.JS - REGISTRATION LOGIC
+// Used by: register.html, register-step2.html, register-step3.html
+// Dependencies: main.js (must be loaded first)
+// ===================================
+
+// ===================================
+// DETECT CURRENT STEP
 // ===================================
 const currentPage = window.location.pathname;
-const isStep1 = currentPage.includes('register.html') && !currentPage.includes('step');
+const isStep1 = (currentPage.includes('register.html') || currentPage.endsWith('/register')) && !currentPage.includes('step');
 const isStep2 = currentPage.includes('step2');
 const isStep3 = currentPage.includes('step3');
 
