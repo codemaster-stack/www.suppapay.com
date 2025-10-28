@@ -11,6 +11,7 @@
     { "source": "/wallet", "destination": "/wallet.html" },
     { "source": "/transactions", "destination": "/transactions.html" },
     { "source": "/add-account", "destination": "/add-account.html" },
-    { "source": "/admin", "destination": "/admin.html" }
+    { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/signUp", "destination": "/register-step2.html" }
   ]
 }

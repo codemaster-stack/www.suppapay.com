@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email - Step 3 | Cross Border Pay</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/register.css">
+    <script src="assets/js/register.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</head>
+<body>
+    <div class="verification-container">
+        <div class="verification-card">
+            <div class="logo-container-center">
+                <img src="assets/images/logo.png" alt="Cross Border Pay Logo" class="logo">
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-step completed">
+                        <div class="progress-circle">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span class="progress-label">Account Type</span>
+                    </div>
+                    <div class="progress-line completed"></div>
+                    <div class="progress-step completed">
+                        <div class="progress-circle">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span class="progress-label">Details</span>
+                    </div>
+                    <div class="progress-line active"></div>
+                    <div class="progress-step active">
+                        <div class="progress-circle">3</div>
+                        <span class="progress-label">Verify</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="verification-content">
+                <div class="verification-icon">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                </div>
+                
+                <h2>Verify Your Email</h2>
+                <p class="verification-subtitle">
+                    We've sent a 6-digit verification code to<br>
+                    <strong id="userEmail">your@email.com</strong>
+                </p>
+                
+                <form id="verificationForm" class="otp-form">
+                    <div class="otp-inputs">
+                        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" autocomplete="off">
+                        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" autocomplete="off">
+                        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" autocomplete="off">
+                        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" autocomplete="off">
+                        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" autocomplete="off">
+                        <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" autocomplete="off">
+                    </div>
+                    
+                    <span class="error-message" id="otpError"></span>
+                    
+                    <button type="submit" class="btn-primary btn-full" id="verifyBtn">
+                        <span class="btn-text">Verify Email</span>
+                        <span class="btn-loader" style="display: none;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </span>
+                    </button>
+                </form>
+                
+                <div class="resend-section">
+                    <p>Didn't receive the code?</p>
+                    <button type="button" class="btn-link" id="resendBtn">
+                        Resend Code <span id="resendTimer"></span>
+                    </button>
+                </div>
+                
+                <button class="btn-back btn-back-center" type="button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Back to Registration
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
