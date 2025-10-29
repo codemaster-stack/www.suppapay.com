@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal KYC - SuppaPay</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/persona-kyc.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+   <script src="assets/js/main.js"></script>
+  <script src="assets/js/personal-kyc.js"></script>
+</head>
+<body>
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+      <div class="spinner"></div>
+      <p>Loading SuppaPay...</p>
+    </div>
+  </div>
+
+  <!-- KYC Container -->
+  <div class="kyc-container">
+    <!-- Header -->
+    <header class="kyc-header">
+      <div class="container">
+        <img src="assets/images/logo.png" alt="SuppaPay Logo" class="kyc-logo" />
+        <div class="kyc-logout">
+          <a href="login.html" class="logout-link">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="kyc-content">
+      <div class="container">
+        <!-- Progress Bar -->
+        <div class="kyc-progress">
+          <div class="progress-step active" data-step="1">
+            <div class="step-circle">1</div>
+            <span class="step-label">Personal Info</span>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="2">
+            <div class="step-circle">2</div>
+            <span class="step-label">Documents</span>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="3">
+            <div class="step-circle">3</div>
+            <span class="step-label">Review</span>
+          </div>
+        </div>
+
+        <!-- KYC Form Card -->
+        <div class="kyc-card">
+          <!-- Header -->
+          <div class="kyc-card-header">
+            <h2 id="stepTitle">Personal Information</h2>
+            <p id="stepDescription">Please provide your accurate personal details</p>
+          </div>
+
+          <!-- Error/Success Messages -->
+          <div class="alert alert-error" id="errorMessage" style="display: none;">
+            <span class="alert-icon">⚠️</span>
+            <span class="alert-text"></span>
+          </div>
+
+          <div class="alert alert-success" id="successMessage" style="display: none;">
+            <span class="alert-icon">✅</span>
+            <span class="alert-text"></span>
+          </div>
+
+          <!-- KYC Form -->
+          <form class="kyc-form" id="kycForm">
+            
+            <!-- STEP 1: PERSONAL INFORMATION -->
+            <div class="form-step active" id="step1">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name <span class="required">*</span></label>
+                  <input 
+                    type="text" 
+                    id="firstName" 
+                    name="firstName" 
+                    placeholder="Enter your first name"
+                    required
+                  />
+                  <span class="input-error" id="firstNameError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="lastName">Last Name <span class="required">*</span></label>
+                  <input 
+                    type="text" 
+                    id="lastName" 
+                    name="lastName" 
+                    placeholder="Enter your last name"
+                    required
+                  />
+                  <span class="input-error" id="lastNameError"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="dateOfBirth">Date of Birth <span class="required">*</span></label>
+                  <input 
+                    type="date" 
+                    id="dateOfBirth" 
+                    name="dateOfBirth" 
+                    required
+                  />
+                  <span class="input-error" id="dateOfBirthError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="gender">Gender <span class="required">*</span></label>
+                  <select id="gender" name="gender" required>
+                    <option value="">Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Prefer not to say</option>
+                  </select>
+                  <span class="input-error" id="genderError"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+                  <input 
+                    type="tel" 
+                    id="phoneNumber" 
+                    name="phoneNumber" 
+                    placeholder="+234 800 000 0000"
+                    required
+                  />
+                  <span class="input-error" id="phoneNumberError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address <span class="required">*</span></label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="your@email.com"
+                    required
+                    readonly
+                  />
+                  <span class="input-help">This email was verified during registration</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="address">Residential Address <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="address" 
+                  name="address" 
+                  placeholder="Street address, building, apartment"
+                  required
+                />
+                <span class="input-error" id="addressError"></span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="city">City <span class="required">*</span></label>
+                  <input 
+                    type="text" 
+                    id="city" 
+                    name="city" 
+                    placeholder="Enter city"
+                    required
+                  />
+                  <span class="input-error" id="cityError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="state">State/Province <span class="required">*</span></label>
+                  <input 
+                    type="text" 
+                    id="state" 
+                    name="state" 
+                    placeholder="Enter state"
+                    required
+                  />
+                  <span class="input-error" id="stateError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="postalCode">Postal Code</label>
+                  <input 
+                    type="text" 
+                    id="postalCode" 
+                    name="postalCode" 
+                    placeholder="Postal/ZIP code"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="country">Country <span class="required">*</span></label>
+                <select id="country" name="country" required>
+                  <option value="">Select country</option>
+                  <option value="NG">Nigeria</option>
+                  <option value="US">United States</option>
+                  <option value="GB">United Kingdom</option>
+                  <option value="CA">Canada</option>
+                  <option value="GH">Ghana</option>
+                  <option value="KE">Kenya</option>
+                  <option value="ZA">South Africa</option>
+                </select>
+                <span class="input-error" id="countryError"></span>
+              </div>
+            </div>
+
+            <!-- STEP 2: IDENTITY VERIFICATION -->
+            <div class="form-step" id="step2">
+              <div class="form-group">
+                <label for="idType">ID Document Type <span class="required">*</span></label>
+                <select id="idType" name="idType" required>
+                  <option value="">Select ID type</option>
+                  <option value="passport">International Passport</option>
+                  <option value="drivers_license">Driver's License</option>
+                  <option value="national_id">National ID Card</option>
+                  <option value="voters_card">Voter's Card (Nigeria)</option>
+                </select>
+                <span class="input-error" id="idTypeError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="idNumber">ID Number <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="idNumber" 
+                  name="idNumber" 
+                  placeholder="Enter your ID number"
+                  required
+                />
+                <span class="input-error" id="idNumberError"></span>
+              </div>
+
+              <!-- Country-Specific Field (BVN for Nigeria, SSN for US, etc.) -->
+              <div class="form-group" id="countrySpecificField" style="display: none;">
+                <label for="countrySpecificId" id="countrySpecificLabel">
+                  BVN (Bank Verification Number) <span class="required">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="countrySpecificId" 
+                  name="countrySpecificId" 
+                  placeholder="Enter BVN"
+                />
+                <span class="input-help" id="countrySpecificHelp">Required for Nigerian residents</span>
+                <span class="input-error" id="countrySpecificIdError"></span>
+              </div>
+
+              <!-- ID Document Upload (Front) -->
+              <div class="form-group">
+                <label>Upload ID Document (Front) <span class="required">*</span></label>
+                <div class="file-upload-wrapper">
+                  <div class="file-upload-area" id="idFrontUpload">
+                    <div class="upload-icon">📄</div>
+                    <p class="upload-text">Drag & drop your ID document here</p>
+                    <p class="upload-subtext">or click to browse</p>
+                    <input 
+                      type="file" 
+                      id="idFrontFile" 
+                      name="idFrontFile" 
+                      accept="image/*,.pdf"
+                      hidden
+                    />
+                    <button type="button" class="btn-upload" onclick="document.getElementById('idFrontFile').click()">
+                      Choose File
+                    </button>
+                    <!-- Camera option for mobile -->
+                    <button type="button" class="btn-camera" id="idFrontCamera">
+                      📷 Take Photo
+                    </button>
+                  </div>
+                  <div class="file-preview" id="idFrontPreview" style="display: none;"></div>
+                </div>
+                <span class="input-error" id="idFrontFileError"></span>
+              </div>
+
+              <!-- ID Document Upload (Back) -->
+              <div class="form-group">
+                <label>Upload ID Document (Back) <span class="required">*</span></label>
+                <div class="file-upload-wrapper">
+                  <div class="file-upload-area" id="idBackUpload">
+                    <div class="upload-icon">📄</div>
+                    <p class="upload-text">Drag & drop your ID document here</p>
+                    <p class="upload-subtext">or click to browse</p>
+                    <input 
+                      type="file" 
+                      id="idBackFile" 
+                      name="idBackFile" 
+                      accept="image/*,.pdf"
+                      hidden
+                    />
+                    <button type="button" class="btn-upload" onclick="document.getElementById('idBackFile').click()">
+                      Choose File
+                    </button>
+                    <button type="button" class="btn-camera" id="idBackCamera">
+                      📷 Take Photo
+                    </button>
+                  </div>
+                  <div class="file-preview" id="idBackPreview" style="display: none;"></div>
+                </div>
+                <span class="input-error" id="idBackFileError"></span>
+              </div>
+
+              <!-- Selfie Upload -->
+              <div class="form-group">
+                <label>Upload Selfie/Photo <span class="required">*</span></label>
+                <div class="file-upload-wrapper">
+                  <div class="file-upload-area" id="selfieUpload">
+                    <div class="upload-icon">🤳</div>
+                    <p class="upload-text">Upload a clear photo of yourself</p>
+                    <p class="upload-subtext">Make sure your face is clearly visible</p>
+                    <input 
+                      type="file" 
+                      id="selfieFile" 
+                      name="selfieFile" 
+                      accept="image/*"
+                      hidden
+                    />
+                    <button type="button" class="btn-upload" onclick="document.getElementById('selfieFile').click()">
+                      Choose File
+                    </button>
+                    <button type="button" class="btn-camera" id="selfieCamera">
+                      📷 Take Selfie
+                    </button>
+                  </div>
+                  <div class="file-preview" id="selfiePreview" style="display: none;"></div>
+                </div>
+                <span class="input-error" id="selfieFileError"></span>
+              </div>
+
+              <!-- Proof of Address Upload -->
+              <div class="form-group">
+                <label>Upload Proof of Address <span class="required">*</span></label>
+                <p class="input-help">Utility bill, bank statement, or government-issued document (not older than 3 months)</p>
+                <div class="file-upload-wrapper">
+                  <div class="file-upload-area" id="proofAddressUpload">
+                    <div class="upload-icon">🏠</div>
+                    <p class="upload-text">Drag & drop your proof of address</p>
+                    <p class="upload-subtext">or click to browse</p>
+                    <input 
+                      type="file" 
+                      id="proofAddressFile" 
+                      name="proofAddressFile" 
+                      accept="image/*,.pdf"
+                      hidden
+                    />
+                    <button type="button" class="btn-upload" onclick="document.getElementById('proofAddressFile').click()">
+                      Choose File
+                    </button>
+                    <button type="button" class="btn-camera" id="proofAddressCamera">
+                      📷 Take Photo
+                    </button>
+                  </div>
+                  <div class="file-preview" id="proofAddressPreview" style="display: none;"></div>
+                </div>
+                <span class="input-error" id="proofAddressFileError"></span>
+              </div>
+            </div>
+
+            <!-- STEP 3: REVIEW & SUBMIT -->
+            <div class="form-step" id="step3">
+              <div class="review-section">
+                <h3>Review Your Information</h3>
+                <p class="review-subtitle">Please review all information carefully before submitting</p>
+
+                <!-- Personal Information Review -->
+                <div class="review-card">
+                  <div class="review-header">
+                    <h4>Personal Information</h4>
+                    <button type="button" class="btn-edit" data-step="1">Edit</button>
+                  </div>
+                  <div class="review-content" id="reviewPersonalInfo"></div>
+                </div>
+
+                <!-- Documents Review -->
+                <div class="review-card">
+                  <div class="review-header">
+                    <h4>Uploaded Documents</h4>
+                    <button type="button" class="btn-edit" data-step="2">Edit</button>
+                  </div>
+                  <div class="review-content" id="reviewDocuments"></div>
+                </div>
+
+                <!-- Confirmation Checkboxes -->
+                <div class="confirmation-section">
+                  <label class="checkbox-container">
+                    <input type="checkbox" id="confirmAccuracy" required />
+                    <span class="checkmark"></span>
+                    <span class="checkbox-label">
+                      I confirm that all information provided is accurate and up-to-date
+                    </span>
+                  </label>
+
+                  <label class="checkbox-container">
+                    <input type="checkbox" id="confirmTerms" required />
+                    <span class="checkmark"></span>
+                    <span class="checkbox-label">
+                      I agree to the <a href="#" target="_blank">Terms & Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>
+                    </span>
+                  </label>
+                </div>
+
+                <!-- Important Notice -->
+                <div class="notice-box">
+                  <div class="notice-icon">ℹ️</div>
+                  <div class="notice-content">
+                    <strong>Important:</strong> Your KYC application will be reviewed within 24-48 hours. 
+                    You'll receive an email notification once approved. Make sure all documents are clear and readable.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form Navigation Buttons -->
+            <div class="form-navigation">
+              <button type="button" class="btn-prev" id="prevBtn" style="display: none;">
+                ← Previous
+              </button>
+              <button type="button" class="btn-next" id="nextBtn">
+                Next Step →
+              </button>
+              <button type="submit" class="btn-submit" id="submitBtn" style="display: none;">
+                Submit KYC Application
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
