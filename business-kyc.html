@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business KYC - SuppaPay</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/business-kyc.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+   <script src="assets/js/main.js"></script>
+  <script src="assets/js/business-kyc.js"></script>
+</head>
+<body>
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+      <div class="spinner"></div>
+      <p>Loading SuppaPay...</p>
+    </div>
+  </div>
+
+  <!-- KYC Container -->
+  <div class="kyc-container">
+    <!-- Header -->
+    <header class="kyc-header">
+      <div class="container">
+        <img src="assets/images/logo.png" alt="SuppaPay Logo" class="kyc-logo" />
+        <div class="kyc-logout">
+          <a href="login.html" class="logout-link">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="kyc-content">
+      <div class="container">
+        <!-- Progress Bar -->
+        <div class="kyc-progress">
+          <div class="progress-step active" data-step="1">
+            <div class="step-circle">1</div>
+            <span class="step-label">Business Info</span>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="2">
+            <div class="step-circle">2</div>
+            <span class="step-label">Documents</span>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="3">
+            <div class="step-circle">3</div>
+            <span class="step-label">Director Info</span>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step" data-step="4">
+            <div class="step-circle">4</div>
+            <span class="step-label">Review</span>
+          </div>
+        </div>
+
+        <!-- KYC Form Card -->
+        <div class="kyc-card">
+          <!-- Header -->
+          <div class="kyc-card-header">
+            <h2 id="stepTitle">Business Information</h2>
+            <p id="stepDescription">Please provide accurate information about your business</p>
+          </div>
+
+          <!-- Error/Success Messages -->
+          <div class="alert alert-error" id="errorMessage" style="display: none;">
+            <span class="alert-icon">⚠️</span>
+            <span class="alert-text"></span>
+          </div>
+
+          <div class="alert alert-success" id="successMessage" style="display: none;">
+            <span class="alert-icon">✅</span>
+            <span class="alert-text"></span>
+          </div>
+
+          <!-- KYC Form -->
+          <form class="kyc-form" id="kycForm">
+            
+            <!-- STEP 1: BUSINESS INFORMATION -->
+            <div class="form-step active" id="step1">
+              <div class="form-group">
+                <label for="businessName">Business/Company Name <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="businessName" 
+                  name="businessName" 
+                  placeholder="Enter registered business name"
+                  required
+                />
+                <span class="input-error" id="businessNameError"></span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="businessType">Business Type <span class="required">*</span></label>
+                  <select id="businessType" name="businessType" required>
+                    <option value="">Select business type</option>
+                    <option value="sole_proprietorship">Sole Proprietorship</option>
+                    <option value="partnership">Partnership</option>
+                    <option value="llc">Limited Liability Company (LLC)</option>
+                    <option value="corporation">Corporation</option>
+                    <option value="cooperative">Cooperative</option>
+                    <option value="ngo">Non-Governmental Organization (NGO)</option>
+                  </select>
+                  <span class="input-error" id="businessTypeError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="registrationNumber">Registration Number <span class="required">*</span></label>
+                  <input 
+                    type="text" 
+                    id="registrationNumber" 
+                    name="registrationNumber" 
+                    placeholder="CAC/RC/EIN number"
+                    required
+                  />
+                  <span class="input-help">CAC number for Nigeria, EIN for US, Company number for UK</span>
+                  <span class="input-error" id="registrationNumberError"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="businessEmail">Business Email <span class="required">*</span></label>
+                  <input 
+                    type="email" 
+                    id="businessEmail" 
+                    name="businessEmail" 
+                    placeholder="business@company.com"
+                    required
+                  />
+                  <span class="input-error" id="businessEmailError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="businessPhone">Business Phone Number <span class="required">*</span></label>
+                  <input 
+                    type="tel" 
+                    id="businessPhone" 
+                    name="businessPhone" 
+                    placeholder="+234 800 000 0000"
+                    required
+                  />
+                  <span class="input-error" id="businessPhoneError"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="businessAddress">Business Address <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="businessAddress" 
+                  name="businessAddress" 
+                  placeholder="Street address, building, suite"
+                  required
+                />
+                <span class="input-error" id="businessAddressError"></span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="businessCity">City <span class="required">*</span></label>
+                  <input 
+                    type="text" 
+                    id="businessCity" 
+                    name="businessCity" 
+                    placeholder="Enter city"
+                    required
+                  />
+                  <span class="input-error" id="businessCityError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="businessState">State/Province <span class="required">*</span></label>
+                  <input 
+                    type="text" 
+                    id="businessState" 
+                    name="businessState" 
+                    placeholder="Enter state"
+                    required
+                  />
+                  <span class="input-error" id="businessStateError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="businessPostalCode">Postal Code</label>
+                  <input 
+                    type="text" 
+                    id="businessPostalCode" 
+                    name="businessPostalCode" 
+                    placeholder="Postal/ZIP code"
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="businessCountry">Country <span class="required">*</span></label>
+                  <select id="businessCountry" name="businessCountry" required>
+                    <option value="">Select country</option>
+                    <option value="NG">Nigeria</option>
+                    <option value="US">United States</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="CA">Canada</option>
+                    <option value="GH">Ghana</option>
+                    <option value="KE">Kenya</option>
+                    <option value="ZA">South Africa</option>
+                  </select>
+                  <span class="input-error" id="businessCountryError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="industry">Industry/Sector <span class="required">*</span></label>
+                  <select id="industry" name="industry" required>
+                    <option value="">Select industry</option>
+                    <option value="technology">Technology/IT</option>
+                    <option value="finance">Finance/Banking</option>
+                    <option value="retail">Retail/E-commerce</option>
+                    <option value="manufacturing">Manufacturing</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="education">Education</option>
+                    <option value="real_estate">Real Estate</option>
+                    <option value="agriculture">Agriculture</option>
+                    <option value="transportation">Transportation/Logistics</option>
+                    <option value="hospitality">Hospitality/Tourism</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <span class="input-error" id="industryError"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="incorporationDate">Date of Incorporation <span class="required">*</span></label>
+                  <input 
+                    type="date" 
+                    id="incorporationDate" 
+                    name="incorporationDate" 
+                    required
+                  />
+                  <span class="input-error" id="incorporationDateError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="taxId">Tax Identification Number (TIN) <span class="required">*</span></label>
+                  <input 
+                    type="text" 
+                    id="taxId" 
+                    name="taxId" 
+                    placeholder="Enter TIN"
+                    required
+                  />
+                  <span class="input-error" id="taxIdError"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="website">Business Website (Optional)</label>
+                <input 
+                  type="url" 
+                  id="website" 
+                  name="website" 
+                  placeholder="https://www.yourcompany.com"
+                />
+              </div>
+            </div>
+
+            <!-- STEP 2: BUSINESS DOCUMENTS -->
+            <div class="form-step" id="step2">
+              <!-- Business Registration Certificate -->
+              <div class="form-group">
+                <label>Business Registration Certificate <span class="required">*</span></label>
+                <p class="input-help">Upload CAC Certificate (Nigeria), Certificate of Incorporation (UK), or Articles of Incorporation (US)</p>
+                <div class="file-upload-wrapper">
+                  <div class="file-upload-area" id="regCertUpload">
+                    <div class="upload-icon">📄</div>
+                    <p class="upload-text">Drag & drop your registration certificate</p>
+                    <p class="upload-subtext">or click to browse</p>
+                    <input 
+                      type="file" 
+                      id="regCertFile" 
+                      name="regCertFile" 
+                      accept="image/*,.pdf"
+                      hidden
+                    />
+                    <button type="button" class="btn-upload" onclick="document.getElementById('regCertFile').click()">
+                      Choose File
+                    </button>
+                    <button type="button" class="btn-camera" id="regCertCamera">
+                      📷 Take Photo
+                    </button>
+                  </div>
+                  <div class="file-preview" id="regCertPreview" style="display: none;"></div>
+                </div>
+                <span class="input-error" id="regCertFileError"></span>
+              </div>
+
+              <!-- Tax Certificate -->
+              <div class="form-group">
+                <label>Tax Certificate/TIN Document <span class="required">*</span></label>
+                <p class="input-help">Upload Tax Identification Number certificate or proof of tax registration</p>
+                <div class="file-upload-wrapper">
+                  <div class="file-upload-area" id="taxCertUpload">
+                    <div class="upload-icon">📄</div>
+                    <p class="upload-text">Drag & drop your tax certificate</p>
+                    <p class="upload-subtext">or click to browse</p>
+                    <input 
+                      type="file" 
+                      id="taxCertFile" 
+                      name="taxCertFile" 
+                      accept="image/*,.pdf"
+                      hidden
+                    />
+                    <button type="button" class="btn-upload" onclick="document.getElementById('taxCertFile').click()">
+                      Choose File
+                    </button>
+                    <button type="button" class="btn-camera" id="taxCertCamera">
+                      📷 Take Photo
+                    </button>
+                  </div>
+                  <div class="file-preview" id="taxCertPreview" style="display: none;"></div>
+                </div>
+                <span class="input-error" id="taxCertFileError"></span>
+              </div>
+
+              <!-- Business Proof of Address -->
+              <div class="form-group">
+                <label>Business Proof of Address <span class="required">*</span></label>
+                <p class="input-help">Utility bill, lease agreement, or official document showing business address (not older than 3 months)</p>
+                <div class="file-upload-wrapper">
+                  <div class="file-upload-area" id="businessProofAddressUpload">
+                    <div class="upload-icon">🏢</div>
+                    <p class="upload-text">Drag & drop proof of business address</p>
+                    <p class="upload-subtext">or click to browse</p>
+                    <input 
+                      type="file" 
+                      id="businessProofAddressFile" 
+                      name="businessProofAddressFile" 
+                      accept="image/*,.pdf"
+                      hidden
+                    />
+                    <button type="button" class="btn-upload" onclick="document.getElementById('businessProofAddressFile').click()">
+                      Choose File
+                    </button>
+                    <button type="button" class="btn-camera" id="businessProofAddressCamera">
+                      📷 Take Photo
+                    </button>
+                  </div>
+                  <div class="file-preview" id="businessProofAddressPreview" style="display: none;"></div>
+                </div>
+                <span class="input-error" id="businessProofAddressFileError"></span>
+              </div>
+
+              <!-- Memorandum & Articles (Optional) -->
+              <div class="form-group">
+                <label>Memorandum & Articles of Association (Optional)</label>
+                <p class="input-help">If applicable, upload your company's memorandum and articles</p>
+                <div class="file-upload-wrapper">
+                  <div class="file-upload-area" id="memoArticlesUpload">
+                    <div class="upload-icon">📋</div>
+                    <p class="upload-text">Drag & drop memorandum & articles</p>
+                    <p class="upload-subtext">or click to browse</p>
+                    <input 
+                      type="file" 
+                      id="memoArticlesFile" 
+                      name="memoArticlesFile" 
+                      accept="image/*,.pdf"
+                      hidden
+                    />
+                    <button type="button" class="btn-upload" onclick="document.getElementById('memoArticlesFile').click()">
+                      Choose File
+                    </button>
+                    <button type="button" class="btn-camera" id="memoArticlesCamera">
+                      📷 Take Photo
+                    </button>
+                  </div>
+                  <div class="file-preview" id="memoArticlesPreview" style="display: none;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 3: DIRECTOR/OWNER INFORMATION -->
+            <div class="form-step" id="step3">
+              <div class="info-box">
+                <div class="info-icon">ℹ️</div>
+                <div class="info-content">
+                  <strong>Director/Owner Information:</strong> Provide details of at least one director or beneficial owner of the business.
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="directorFirstName">Director/Owner First Name <span class="required">*</span></label>
+                  <input 
+                    type="text" 
+                    id="directorFirstName" 
+                    name="directorFirstName" 
+                    placeholder="First name"
+                    required
+                  />
+                  <span class="input-error" id="directorFirstNameError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="directorLastName">Director/Owner Last Name <span class="required">*</span></label>
+                  <input 
+                    type="text" 
+                    id="directorLastName" 
+                    name="directorLastName" 
+                    placeholder="Last name"
+                    required
+                  />
+                  <span class="input-error" id="directorLastNameError"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="directorEmail">Director Email <span class="required">*</span></label>
+                  <input 
+                    type="email" 
+                    id="directorEmail" 
+                    name="directorEmail" 
+                    placeholder="director@email.com"
+                    required
+                  />
+                  <span class="input-error" id="directorEmailError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="directorPhone">Director Phone Number <span class="required">*</span></label>
+                  <input 
+                    type="tel" 
+                    id="directorPhone" 
+                    name="directorPhone" 
+                    placeholder="+234 800 000 0000"
+                    required
+                  />
+                  <span class="input-error" id="directorPhoneError"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="directorDob">Director Date of Birth <span class="required">*</span></label>
+                  <input 
+                    type="date" 
+                    id="directorDob" 
+                    name="directorDob" 
+                    required
+                  />
+                  <span class="input-error" id="directorDobError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="ownershipPercentage">Ownership Percentage <span class="required">*</span></label>
+                  <input 
+                    type="number" 
+                    id="ownershipPercentage" 
+                    name="ownershipPercentage" 
+                    placeholder="e.g., 25"
+                    min="1"
+                    max="100"
+                    required
+                  />
+                  <span class="input-help">Enter percentage of ownership in the business</span>
+                  <span class="input-error" id="ownershipPercentageError"></span>
+                </div>
+              </div>
+
+              <!-- Director ID Upload -->
+              <div class="form-group">
+                <label>Director/Owner ID Document <span class="required">*</span></label>
+                <p class="input-help">Upload passport, national ID, or driver's license</p>
+                <div class="file-upload-wrapper">
+                  <div class="file-upload-area" id="directorIdUpload">
+                    <div class="upload-icon">🆔</div>
+                    <p class="upload-text">Drag & drop director's ID</p>
+                    <p class="upload-subtext">or click to browse</p>
+                    <input 
+                      type="file" 
+                      id="directorIdFile" 
+                      name="directorIdFile" 
+                      accept="image/*,.pdf"
+                      hidden
+                    />
+                    <button type="button" class="btn-upload" onclick="document.getElementById('directorIdFile').click()">
+                      Choose File
+                    </button>
+                    <button type="button" class="btn-camera" id="directorIdCamera">
+                      📷 Take Photo
+                    </button>
+                  </div>
+                  <div class="file-preview" id="directorIdPreview" style="display: none;"></div>
+                </div>
+                <span class="input-error" id="directorIdFileError"></span>
+              </div>
+
+              <!-- Director Photo -->
+              <div class="form-group">
+                <label>Director/Owner Photo <span class="required">*</span></label>
+                <p class="input-help">Upload a clear photo of the director/owner</p>
+                <div class="file-upload-wrapper">
+                  <div class="file-upload-area" id="directorPhotoUpload">
+                    <div class="upload-icon">📸</div>
+                    <p class="upload-text">Drag & drop director's photo</p>
+                    <p class="upload-subtext">or click to browse</p>
+                    <input 
+                      type="file" 
+                      id="directorPhotoFile" 
+                      name="directorPhotoFile" 
+                      accept="image/*"
+                      hidden
+                    />
+                    <button type="button" class="btn-upload" onclick="document.getElementById('directorPhotoFile').click()">
+                      Choose File
+                    </button>
+                    <button type="button" class="btn-camera" id="directorPhotoCamera">
+                      📷 Take Photo
+                    </button>
+                  </div>
+                  <div class="file-preview" id="directorPhotoPreview" style="display: none;"></div>
+                </div>
+                <span class="input-error" id="directorPhotoFileError"></span>
+              </div>
+            </div>
+
+            <!-- STEP 4: REVIEW & SUBMIT -->
+            <div class="form-step" id="step4">
+              <div class="review-section">
+                <h3>Review Your Business Information</h3>
+                <p class="review-subtitle">Please review all information carefully before submitting</p>
+
+                <!-- Business Information Review -->
+                <div class="review-card">
+                  <div class="review-header">
+                    <h4>Business Information</h4>
+                    <button type="button" class="btn-edit" data-step="1">Edit</button>
+                  </div>
+                  <div class="review-content" id="reviewBusinessInfo"></div>
+                </div>
+
+                <!-- Business Documents Review -->
+                <div class="review-card">
+                  <div class="review-header">
+                    <h4>Business Documents</h4>
+                    <button type="button" class="btn-edit" data-step="2">Edit</button>
+                  </div>
+                  <div class="review-content" id="reviewBusinessDocuments"></div>
+                </div>
+
+                <!-- Director Information Review -->
+                <div class="review-card">
+                  <div class="review-header">
+                    <h4>Director/Owner Information</h4>
+                    <button type="button" class="btn-edit" data-step="3">Edit</button>
+                  </div>
+                  <div class="review-content" id="reviewDirectorInfo"></div>
+                </div>
+
+                <!-- Confirmation Checkboxes -->
+                <div class="confirmation-section">
+                  <label class="checkbox-container">
+                    <input type="checkbox" id="confirmAccuracy" required />
+                    <span class="checkmark"></span>
+                    <span class="checkbox-label">
+                      I confirm that all business information provided is accurate and up-to-date
+                    </span>
+                  </label>
+
+                  <label class="checkbox-container">
+                    <input type="checkbox" id="confirmAuthorization" required />
+                    <span class="checkmark"></span>
+                    <span class="checkbox-label">
+                      I confirm that I am authorized to submit this KYC application on behalf of the business
+                    </span>
+                  </label>
+
+                  <label class="checkbox-container">
+                    <input type="checkbox" id="confirmTerms" required />
+                    <span class="checkmark"></span>
+                    <span class="checkbox-label">
+                      I agree to the <a href="#" target="_blank">Business Terms & Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>
+                    </span>
+                  </label>
+                </div>
+
+                <!-- Important Notice -->
+                <div class="notice-box">
+                  <div class="notice-icon">ℹ️</div>
+                  <div class="notice-content">
+                    <strong>Important:</strong> Your business KYC application will be reviewed within 2-5 business days. 
+                    You'll receive an email notification once approved. Additional documents may be requested if needed.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form Navigation Buttons -->
+            <div class="form-navigation">
+              <button type="button" class="btn-prev" id="prevBtn" style="display: none;">
+                ← Previous
+              </button>
+              <button type="button" class="btn-next" id="nextBtn">
+                Next Step →
+              </button>
+              <button type="submit" class="btn-submit" id="submitBtn" style="display: none;">
+                Submit Business KYC
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
