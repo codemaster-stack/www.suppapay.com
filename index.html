@@ -6,6 +6,8 @@
   <title>SuppaPay - Send Money Globally With Ease</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="stylesheet" href="assets/css/chat.css" />
+  <script src="assets/js/chat.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/index.js"></script>
 </head>
@@ -102,6 +104,56 @@
       </div>
     </div>
   </section>
+
+                       <!-- Scrolling Promo Banner -->
+                <div class="promo-banner-container">
+                    <div class="promo-banner-scroll">
+                        <div class="promo-item">
+                            <div class="promo-content">
+                                <span class="promo-badge">New</span>
+                                <span class="promo-text">Send money to 150+ countries with zero fees this month!</span>
+                                <button class="btn-promo-cta">Send Now</button>
+                            </div>
+                        </div>
+                        <div class="promo-item">
+                            <div class="promo-content">
+                                <span class="promo-badge">Limited</span>
+                                <span class="promo-text">Get 10% cashback on flight bookings - Limited time offer!</span>
+                                <button class="btn-promo-cta">Book Flight</button>
+                            </div>
+                        </div>
+                        <div class="promo-item">
+                            <div class="promo-content">
+                                <span class="promo-badge">Hot</span>
+                                <span class="promo-text">Create your virtual card today and get $5 bonus!</span>
+                                <button class="btn-promo-cta">Create Card</button>
+                            </div>
+                        </div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="promo-item">
+                            <div class="promo-content">
+                                <span class="promo-badge">New</span>
+                                <span class="promo-text">Send money to 150+ countries with zero fees this month!</span>
+                                <button class="btn-promo-cta">Send Now</button>
+                            </div>
+                        </div>
+                        <div class="promo-item">
+                            <div class="promo-content">
+                                <span class="promo-badge">Limited</span>
+                                <span class="promo-text">Get 10% cashback on flight bookings - Limited time offer!</span>
+                                <button class="btn-promo-cta">Book Flight</button>
+                            </div>
+                        </div>
+                        <div class="promo-item">
+                            <div class="promo-content">
+                                <span class="promo-badge">Hot</span>
+                                <span class="promo-text">Create your virtual card today and get $5 bonus!</span>
+                                <button class="btn-promo-cta">Create Card</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
   <!-- Why Choose SuppaPay -->
   <section class="why-choose">
@@ -252,6 +304,141 @@
       <a href="register.html" class="btn-hero">Create Your Account Now</a>
     </div>
   </section>
+
+
+                                            <!-- Chat Button -->
+    <button class="chat-button" id="chatButton">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        <span class="chat-badge">1</span>
+    </button>
+    
+    <!-- Chat Window -->
+    <div class="chat-window" id="chatWindow">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="chat-header-left">
+                <div class="chat-avatar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <div class="chat-header-info">
+                    <h3>Support Team</h3>
+                    <div class="chat-status">
+                        <span class="status-dot"></span>
+                        <span>Online - We reply instantly</span>
+                    </div>
+                </div>
+            </div>
+            <button class="chat-close" id="chatClose">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Chat Body -->
+        <div class="chat-body" id="chatBody">
+            <!-- Welcome Message -->
+            <div class="welcome-message">
+                <h4>👋 Welcome to Cross Border Pay!</h4>
+                <p>How can we help you today? Choose a topic below or type your question.</p>
+                
+                <div class="quick-chat-actions">
+                    <button class="quick-action-btn" data-action="Send Money">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                        Send Money
+                    </button>
+                    <button class="quick-action-btn" data-action="Track Transfer">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        Track Transfer
+                    </button>
+                    <button class="quick-action-btn" data-action="Account Help">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        Account Help
+                    </button>
+                    <button class="quick-action-btn" data-action="Security">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                        Security
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Sample Messages -->
+            <div class="chat-message support">
+                <div class="message-avatar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                    </svg>
+                </div>
+                <div class="message-content">
+                    <div class="message-bubble">
+                        Hi there! I'm here to help with your international transfers. What would you like to know?
+                    </div>
+                    <div class="message-time">Just now</div>
+                </div>
+            </div>
+            
+            <!-- Typing Indicator -->
+            <div class="typing-indicator" id="typingIndicator">
+                <div class="message-avatar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                    </svg>
+                </div>
+                <div class="typing-dots">
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chat Footer -->
+        <div class="chat-footer">
+            <div class="chat-input-wrapper">
+                <input 
+                    type="text" 
+                    class="chat-input" 
+                    id="chatInput" 
+                    placeholder="Type your message..."
+                    autocomplete="off"
+                >
+                <button class="chat-send-btn" id="chatSendBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"/>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Powered By -->
+        <div class="chat-powered">
+            Powered by Cross Border Pay Support
+        </div>
+    </div>
+
 
   <!-- Footer -->
   <footer class="footer">

@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Dashboard | Cross Border Pay</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/personalDashboard.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/businessDashboard.css">
+    <link rel="stylesheet" href="assets/css/chat.css">
+    <script src="assets/js/chat.js"></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/businessDashboard.js" defer></script>
+</head>
+<body>
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <img src="assets/images/logo.png" alt="Cross Border Pay" class="sidebar-logo">
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="businessDashboard.html" class="nav-item active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+                
+                <a href="send-money.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <polyline points="19 12 12 19 5 12"></polyline>
+                    </svg>
+                    <span>Send Money</span>
+                </a>
+                
+                <a href="transactions.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    <span>Transactions</span>
+                </a>
+                
+                <a href="team-management.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span>Team</span>
+                </a>
+                
+                <a href="invoices.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    <span>Invoices</span>
+                </a>
+                
+                <a href="payment-links.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
+                    <span>Payment Links</span>
+                </a>
+                
+                <a href="store-products.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span>Store & Products</span>
+                </a>
+                
+                <a href="accounts.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                        <line x1="1" y1="10" x2="23" y2="10"></line>
+                    </svg>
+                    <span>My Accounts</span>
+                </a>
+                
+                <a href="reports.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                    <span>Reports</span>
+                </a>
+                
+                <a href="settings.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M12 1v6m0 6v6m9-9h-6m-6 0H3"></path>
+                    </svg>
+                    <span>Settings</span>
+                </a>
+                
+                <a href="support.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                    <span>Support</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button class="btn-logout">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Top Bar -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button class="btn-menu-toggle" id="menuToggle">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                    <h1 class="page-title">Business Dashboard</h1>
+                </div>
+                
+                <div class="header-right">
+                    <button class="btn-icon" id="notificationBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                        <span class="notification-badge">5</span>
+                    </button>
+                    
+                    <div class="user-profile" id="userProfile">
+                        <div class="user-avatar">
+                            <img src="assets/images/avatar-placeholder.png" alt="User" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2240%22 height=%2240%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23666%22 stroke-width=%222%22%3E%3Cpath d=%22M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2%22/%3E%3Ccircle cx=%2212%22 cy=%227%22 r=%224%22/%3E%3C/svg%3E'">
+                        </div>
+                        <div class="user-info">
+                            <span class="user-name">Acme Corp</span>
+                            <span class="user-role">Business Account</span>
+                        </div>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <div class="welcome-banner business-welcome">
+                    <div class="welcome-content">
+                        <h2>Welcome back, <span id="businessName">Acme Corp</span>! 🏢</h2>
+                        <p>Here's your business overview for today</p>
+                    </div>
+                    <div class="quick-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Today's Revenue</span>
+                            <span class="stat-value">₦450,000</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Pending Invoices</span>
+                            <span class="stat-value">12</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Active Team</span>
+                            <span class="stat-value">8</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Business Analytics -->
+            <section class="business-analytics">
+                <div class="analytics-card">
+                    <div class="analytics-header">
+                        <h3>Business Overview</h3>
+                        <select class="period-selector">
+                            <option value="today">Today</option>
+                            <option value="week" selected>This Week</option>
+                            <option value="month">This Month</option>
+                            <option value="year">This Year</option>
+                        </select>
+                    </div>
+                    <div class="analytics-grid">
+                        <div class="metric-card revenue">
+                            <div class="metric-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </div>
+                            <div class="metric-details">
+                                <span class="metric-label">Total Revenue</span>
+                                <h3 class="metric-value">₦2,450,000</h3>
+                                <span class="metric-change positive">+12.5% from last week</span>
+                            </div>
+                        </div>
+                        
+                        <div class="metric-card expenses">
+                            <div class="metric-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                    <polyline points="17 6 23 6 23 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="metric-details">
+                                <span class="metric-label">Total Expenses</span>
+                                <h3 class="metric-value">₦850,000</h3>
+                                <span class="metric-change negative">+5.2% from last week</span>
+                            </div>
+                        </div>
+                        
+                        <div class="metric-card profit">
+                            <div class="metric-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="metric-details">
+                                <span class="metric-label">Net Profit</span>
+                                <h3 class="metric-value">₦1,600,000</h3>
+                                <span class="metric-change positive">+18.3% from last week</span>
+                            </div>
+                        </div>
+                        
+                        <div class="metric-card orders">
+                            <div class="metric-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                            </div>
+                            <div class="metric-details">
+                                <span class="metric-label">Total Orders</span>
+                                <h3 class="metric-value">143</h3>
+                                <span class="metric-change positive">+8.7% from last week</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+                <div class="promo-banner-container">
+                    <div class="promo-banner-scroll">
+                        <div class="promo-item">
+                            <div class="promo-content">
+                                <span class="promo-badge">New</span>
+                                <span class="promo-text">Send money to 150+ countries with zero fees this month!</span>
+                                <button class="btn-promo-cta">Send Now</button>
+                            </div>
+                        </div>
+                        <div class="promo-item">
+                            <div class="promo-content">
+                                <span class="promo-badge">Limited</span>
+                                <span class="promo-text">Get 10% cashback on flight bookings - Limited time offer!</span>
+                                <button class="btn-promo-cta">Book Flight</button>
+                            </div>
+                        </div>
+                        <div class="promo-item">
+                            <div class="promo-content">
+                                <span class="promo-badge">Hot</span>
+                                <span class="promo-text">Create your virtual card today and get $5 bonus!</span>
+                                <button class="btn-promo-cta">Create Card</button>
+                            </div>
+                        </div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="promo-item">
+                            <div class="promo-content">
+                                <span class="promo-badge">New</span>
+                                <span class="promo-text">Send money to 150+ countries with zero fees this month!</span>
+                                <button class="btn-promo-cta">Send Now</button>
+                            </div>
+                        </div>
+                        <div class="promo-item">
+                            <div class="promo-content">
+                                <span class="promo-badge">Limited</span>
+                                <span class="promo-text">Get 10% cashback on flight bookings - Limited time offer!</span>
+                                <button class="btn-promo-cta">Book Flight</button>
+                            </div>
+                        </div>
+                        <div class="promo-item">
+                            <div class="promo-content">
+                                <span class="promo-badge">Hot</span>
+                                <span class="promo-text">Create your virtual card today and get $5 bonus!</span>
+                                <button class="btn-promo-cta">Create Card</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Account Overview -->
+            <section class="account-overview">
+                <div class="account-card">
+                    <div class="account-header">
+                        <div class="account-selector">
+                            <label>Current Account</label>
+                            <div class="account-dropdown" id="accountDropdown">
+                                <button class="account-dropdown-btn">
+                                    <span class="account-flag">🇳🇬</span>
+                                    <div class="account-details">
+                                        <span class="account-currency">NGN Account</span>
+                                        <span class="account-number">****1234</span>
+                                    </div>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                                <div class="account-dropdown-menu">
+                                    <div class="account-option active">
+                                        <span class="account-flag">🇳🇬</span>
+                                        <div class="account-details">
+                                            <span class="account-currency">NGN Account</span>
+                                            <span class="account-number">****1234</span>
+                                        </div>
+                                        <span class="account-balance">₦3,250,000</span>
+                                    </div>
+                                    <div class="account-option">
+                                        <span class="account-flag">🇺🇸</span>
+                                        <div class="account-details">
+                                            <span class="account-currency">USD Account</span>
+                                            <span class="account-number">****5678</span>
+                                        </div>
+                                        <span class="account-balance">$12,500</span>
+                                    </div>
+                                    <button class="btn-add-account" id="addAccountBtn">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        </svg>
+                                        Add New Account
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn-icon-only">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"></circle>
+                                <circle cx="12" cy="5" r="1"></circle>
+                                <circle cx="12" cy="19" r="1"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <div class="balance-display">
+                        <span class="balance-label">Available Balance</span>
+                        <h2 class="balance-amount">₦3,250,000.00</h2>
+                        <span class="balance-usd">≈ $4,950.50 USD</span>
+                    </div>
+                    
+                    <div class="account-actions">
+                        <button class="btn-action primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            Add Money
+                        </button>
+                        <button class="btn-action secondary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                                <rect x="6" y="14" width="12" height="8"></rect>
+                            </svg>
+                            Withdraw
+                        </button>
+                        <button class="btn-action secondary" id="exchangeBtn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="17 1 21 5 17 9"></polyline>
+                                <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                                <polyline points="7 23 3 19 7 15"></polyline>
+                                <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                            </svg>
+                            Exchange
+                        </button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Business Account Details Section -->
+            <section class="account-details-section">
+                <div class="account-details-card">
+                    <div class="details-header">
+                        <h3 class="section-title">Business Account Details</h3>
+                        <button class="btn-icon-only" id="toggleAccountDetails">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <span class="detail-label">Business Account Number</span>
+                            <div class="detail-value-wrapper">
+                                <span class="detail-value hidden" id="accountNumber">1234567890</span>
+                                <button class="btn-copy" data-copy="accountNumber">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <span class="detail-label">Bank Name</span>
+                            <div class="detail-value-wrapper">
+                                <span class="detail-value" id="bankName">Cross Border Pay Business</span>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <span class="detail-label">Business Name</span>
+                            <div class="detail-value-wrapper">
+                                <span class="detail-value hidden" id="accountName">Acme Corporation Ltd</span>
+                                <button class="btn-copy" data-copy="accountName">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <span class="detail-label">Business Registration Number</span>
+                            <div class="detail-value-wrapper">
+                                <span class="detail-value hidden" id="businessRegNumber">RC1234567</span>
+                                <button class="btn-copy" data-copy="businessRegNumber">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <span class="detail-label">Routing Number</span>
+                            <div class="detail-value-wrapper">
+                                <span class="detail-value hidden" id="routingNumber">021000021</span>
+                                <button class="btn-copy" data-copy="routingNumber">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <span class="detail-label">SWIFT/BIC</span>
+                            <div class="detail-value-wrapper">
+                                <span class="detail-value hidden" id="swiftCode">CBPYNGLA</span>
+                                <button class="btn-copy" data-copy="swiftCode">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <span class="detail-label">IBAN</span>
+                            <div class="detail-value-wrapper">
+                                <span class="detail-value hidden" id="ibanNumber">NG21CBPY0001234567890</span>
+                                <button class="btn-copy" data-copy="ibanNumber">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <span class="detail-label">Tax ID / VAT Number</span>
+                            <div class="detail-value-wrapper">
+                                <span class="detail-value hidden" id="taxId">NG-VAT-12345678</span>
+                                <button class="btn-copy" data-copy="taxId">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="details-info">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        <span>Share these details with clients to receive business payments into your account</span>
+                    </div>
+                </div>
+            </section>
+            
+            
+            <!-- Quick Business Actions -->
+            <section class="quick-actions">
+                <h3 class="section-title">Quick Business Actions</h3>
+                <div class="actions-grid business-grid">
+                    <button class="action-card" id="createInvoiceBtn">
+                        <div class="action-icon invoice">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                            </svg>
+                        </div>
+                        <h4>Create Invoice</h4>
+                        <p>Generate and send invoices</p>
+                    </button>
+                    
+                    <button class="action-card" id="createPaymentLinkBtn">
+                        <div class="action-icon payment-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                            </svg>
+                        </div>
+                        <h4>Create Payment Link</h4>
+                        <p>Generate shareable payment link</p>
+                    </button>
+                    
+                    <button class="action-card" id="payEmployeesBtn">
+                        <div class="action-icon payroll">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h4>Pay Employees</h4>
+                        <p>Process payroll payments</p>
+                    </button>
+                    
+                    <button class="action-card" id="bulkPaymentBtn">
+                        <div class="action-icon bulk">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <h4>Bulk Payment</h4>
+                        <p>Pay multiple recipients</p>
+                    </button>
+
+                            <a href="create-store.html" class="action-card">
+                                <div class="action-icon store">
+                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                    <line x1="12" y1="2" x2="12" y2="8"></line>
+                                    <line x1="9" y1="5" x2="15" y2="5"></line>
+                                  </svg>
+                                </div>
+                                <h4>Create Store</h4>
+                                <p>Set up your online store</p>
+                            </a>
+                    
+                    <a href="store-products.html" class="action-card">
+                        <div class="action-icon store">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </div>
+                        <h4>Manage Store</h4>
+                        <p>Products & inventory</p>
+                    </a>
+                    
+                    <a href="reports.html" class="action-card">
+                        <div class="action-icon reports">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="20" x2="18" y2="10"></line>
+                                <line x1="12" y1="20" x2="12" y2="4"></line>
+                                <line x1="6" y1="20" x2="6" y2="14"></line>
+                            </svg>
+                        </div>
+                        <h4>Generate Report</h4>
+                        <p>Financial reports & analytics</p>
+                    </a>
+
+                    <a href="virtual-cards.html" class="action-card">
+                     <div class="action-icon reports">
+                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                        <line x1="1" y1="10" x2="23" y2="10"></line>
+                      </svg>
+                     </div>
+                     <h4>Virtual Cards</h4>
+                     <p>Pay Globally</p>
+                   </a>
+                </div>
+            </section>
+            
+            <!-- Dashboard Bottom Section -->
+            <div class="dashboard-bottom-section">
+                <!-- Recent Activity -->
+                <section class="recent-transactions">
+                    <div class="section-header">
+                        <h3 class="section-title">Recent Activity</h3>
+                        <a href="transactions.html" class="view-all">View All</a>
+                    </div>
+                    
+                    <div class="transactions-list">
+                        <div class="transaction-item">
+                            <div class="transaction-icon invoice">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                </svg>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Payment Link - Product Sale</h4>
+                                <span class="transaction-date">Dec 20, 2024</span>
+                            </div>
+                            <div class="transaction-amount received">+₦75,000</div>
+                        </div>
+                        
+                        <div class="transaction-item">
+                            <div class="transaction-icon store">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Store Order #ORD-5678</h4>
+                                <span class="transaction-date">Dec 19, 2024</span>
+                            </div>
+                            <div class="transaction-amount received">+₦45,000</div>
+                        </div>
+                        
+                        <div class="transaction-item">
+                            <div class="transaction-icon sent">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <polyline points="19 12 12 19 5 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Supplier Payment</h4>
+                                <span class="transaction-date">Dec 18, 2024</span>
+                            </div>
+                            <div class="transaction-amount sent">-₦350,000</div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Team Members -->
+                <section class="team-members">
+                    <div class="section-header">
+                        <h3 class="section-title">Team Members</h3>
+                        <a href="team-management.html" class="view-all">Manage Team</a>
+                    </div>
+                    
+                    <div class="team-list">
+                        <div class="team-member-item">
+                            <div class="member-avatar">JD</div>
+                            <div class="member-info">
+                                <h4>John Doe</h4>
+                                <span class="member-role">Admin</span>
+                            </div>
+                            <span class="member-status active">Active</span>
+                        </div>
+                        
+                        <div class="team-member-item">
+                            <div class="member-avatar">SA</div>
+                            <div class="member-info">
+                                <h4>Sarah Adams</h4>
+                                <span class="member-role">Accountant</span>
+                            </div>
+                            <span class="member-status active">Active</span>
+                        </div>
+                        
+                        <div class="team-member-item">
+                            <div class="member-avatar">MB</div>
+                            <div class="member-info">
+                                <h4>Mike Brown</h4>
+                                <span class="member-role">Manager</span>
+                            </div>
+                            <span class="member-status active">Active</span>
+                        </div>
+                        
+                        <div class="team-member-item">
+                            <div class="member-avatar">EW</div>
+                            <div class="member-info">
+                                <h4>Emma Wilson</h4>
+                                <span class="member-role">Sales</span>
+                            </div>
+                            <span class="member-status active">Active</span>
+                        </div>
+                        
+                        <button class="add-team-member" id="addTeamMemberBtn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            <span>Add Team Member</span>
+                        </button>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Pending Invoices -->
+            <section class="pending-invoices">
+                <div class="section-header">
+                    <h3 class="section-title">Pending Invoices</h3>
+                    <a href="invoices.html" class="view-all">View All Invoices</a>
+                </div>
+                
+                <div class="invoices-grid">
+                    <div class="invoice-card">
+                        <div class="invoice-header">
+                            <span class="invoice-number">#INV-1245</span>
+                            <span class="invoice-status pending">Pending</span>
+                        </div>
+                        <h4 class="invoice-client">Tech Solutions Ltd</h4>
+                        <div class="invoice-details">
+                            <span class="invoice-date">Due: Dec 25, 2024</span>
+                            <span class="invoice-amount">₦250,000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="invoice-card">
+                        <div class="invoice-header">
+                            <span class="invoice-number">#INV-1246</span>
+                            <span class="invoice-status overdue">Overdue</span>
+                        </div>
+                        <h4 class="invoice-client">Global Enterprises</h4>
+                        <div class="invoice-details">
+                            <span class="invoice-date">Due: Dec 15, 2024</span>
+                            <span class="invoice-amount">₦180,000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="invoice-card">
+                        <div class="invoice-header">
+                            <span class="invoice-number">#INV-1247</span>
+                            <span class="invoice-status pending">Pending</span>
+                        </div>
+                        <h4 class="invoice-client">Startup Hub Inc</h4>
+                        <div class="invoice-details">
+                            <span class="invoice-date">Due: Dec 28, 2024</span>
+                            <span class="invoice-amount">₦95,000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="invoice-card">
+                        <div class="invoice-header">
+                            <span class="invoice-number">#INV-1248</span>
+                            <span class="invoice-status pending">Pending</span>
+                        </div>
+                        <h4 class="invoice-client">Digital Agency Co</h4>
+                        <div class="invoice-details">
+                            <span class="invoice-date">Due: Dec 30, 2024</span>
+                            <span class="invoice-amount">₦320,000</span>
+                        </div>
+                    </div>
+                    <div class="invoice-card">
+                        <div class="invoice-header">
+                            <span class="invoice-number">#INV-1234</span>
+                            <span class="invoice-status paid">Paid</span>
+                        </div>
+                        <h4 class="invoice-client">Supper Needs</h4>
+                        <div class="invoice-details">
+                              <span class="transaction-date">Today, 3:45 PM</span>
+                              <span class="transaction-amount received">+₦125,000</span>
+                        </div>
+                    </div>
+                    <div class="invoice-card">
+                        <div class="invoice-header">
+                            <span class="invoice-number">#INV-1234</span>
+                            <span class="invoice-status paid">Paid</span>
+                        </div>
+                        <h4 class="invoice-client">Supper Store</h4>
+                        <div class="invoice-details">
+                              <span class="transaction-date">Today, 3:45 PM</span>
+                              <span class="transaction-amount received">+₦215,000</span>
+                        </div>
+                    </div>
+            </section>
+            
+            <!-- Low Stock Alert -->
+            <section class="stock-alerts">
+                <div class="section-header">
+                    <h3 class="section-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                            <line x1="12" y1="9" x2="12" y2="13"></line>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                        Low Stock Alerts
+                    </h3>
+                    <a href="store-products.html" class="view-all">Manage Stock</a>
+                </div>
+                
+                <div class="stock-alerts-list">
+                    <div class="stock-alert-item">
+                        <div class="product-info">
+                            <h4>Premium Wireless Headphones</h4>
+                            <span class="stock-level critical">Only 3 left</span>
+                        </div>
+                        <button class="btn-restock">Restock</button>
+                    </div>
+                    
+                    <div class="stock-alert-item">
+                        <div class="product-info">
+                            <h4>Smart Watch Series 5</h4>
+                            <span class="stock-level low">8 left</span>
+                        </div>
+                        <button class="btn-restock">Restock</button>
+                    </div>
+                    
+                    <div class="stock-alert-item">
+                        <div class="product-info">
+                            <h4>Laptop Stand Adjustable</h4>
+                            <span class="stock-level critical">2 left</span>
+                        </div>
+                        <button class="btn-restock">Restock</button>
+                    </div>
+                </div>
+            </section>
+
+                  <section class="stock-alerts">
+             <div class="transaction-item">
+                            <div class="transaction-icon payment-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                </svg>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Payment Link - Product Sale</h4>
+                                <span class="transaction-date">Dec 20, 2024</span>
+                            </div>
+                            <div class="transaction-amount received">+₦75,000</div>
+                        </div>
+                        
+                        <div class="transaction-item">
+                            <div class="transaction-icon store">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Store Order #ORD-5678</h4>
+                                <span class="transaction-date">Dec 19, 2024</span>
+                            </div>
+                            <div class="transaction-amount received">+₦45,000</div>
+                        </div>
+                        
+                        <div class="transaction-item">
+                            <div class="transaction-icon sent">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <polyline points="19 12 12 19 5 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Supplier Payment</h4>
+                                <span class="transaction-date">Dec 18, 2024</span>
+                            </div>
+                            <div class="transaction-amount sent">-₦350,000</div>
+                        </div>
+                        
+                        <div class="transaction-item">
+                            <div class="transaction-icon payroll">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Payroll - 8 Employees</h4>
+                                <span class="transaction-date">Dec 17, 2024</span>
+                            </div>
+                            <div class="transaction-amount sent">-₦480,000</div>
+                        </div>
+                    </div>
+                </section>
+                
+        </main>
+    </div>
+    
+    <!-- Add Account Modal (Same as Personal) -->
+    <div class="modal" id="addAccountModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Request New Account</h3>
+                <button class="modal-close" id="closeModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <form id="addAccountForm" class="modal-form">
+                <div class="form-group">
+                    <label for="accountCountry">Select Country/Currency <span class="required">*</span></label>
+                    <select id="accountCountry" name="country" required>
+                        <option value="">Choose a country</option>
+                        <option value="US">🇺🇸 United States (USD)</option>
+                        <option value="GB">🇬🇧 United Kingdom (GBP)</option>
+                        <option value="EU">🇪🇺 European Union (EUR)</option>
+                        <option value="CA">🇨🇦 Canada (CAD)</option>
+                        <option value="AU">🇦🇺 Australia (AUD)</option>
+                        <option value="GH">🇬🇭 Ghana (GHS)</option>
+                        <option value="KE">🇰🇪 Kenya (KES)</option>
+                        <option value="ZA">🇿🇦 South Africa (ZAR)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="accountReason">Reason for Request <span class="required">*</span></label>
+                    <textarea id="accountReason" name="reason" rows="4" required placeholder="Please explain why you need this account..."></textarea>
+                </div>
+                
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="cancelRequest">Cancel</button>
+                    <button type="submit" class="btn-primary">Submit Request</button>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+    
+
+      <!-- Chat Button -->
+    <button class="chat-button" id="chatButton">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        <span class="chat-badge">1</span>
+    </button>
+    
+    <!-- Chat Window -->
+    <div class="chat-window" id="chatWindow">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="chat-header-left">
+                <div class="chat-avatar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <div class="chat-header-info">
+                    <h3>Support Team</h3>
+                    <div class="chat-status">
+                        <span class="status-dot"></span>
+                        <span>Online - We reply instantly</span>
+                    </div>
+                </div>
+            </div>
+            <button class="chat-close" id="chatClose">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Chat Body -->
+        <div class="chat-body" id="chatBody">
+            <!-- Welcome Message -->
+            <div class="welcome-message">
+                <h4>👋 Welcome to Cross Border Pay!</h4>
+                <p>How can we help you today? Choose a topic below or type your question.</p>
+                
+                <div class="quick-chat-actions">
+                    <button class="quick-action-btn" data-action="Send Money">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                        Send Money
+                    </button>
+                    <button class="quick-action-btn" data-action="Track Transfer">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        Track Transfer
+                    </button>
+                    <button class="quick-action-btn" data-action="Account Help">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        Account Help
+                    </button>
+                    <button class="quick-action-btn" data-action="Security">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                        Security
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Sample Messages -->
+            <div class="chat-message support">
+                <div class="message-avatar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                    </svg>
+                </div>
+                <div class="message-content">
+                    <div class="message-bubble">
+                        Hi there! I'm here to help with your international transfers. What would you like to know?
+                    </div>
+                    <div class="message-time">Just now</div>
+                </div>
+            </div>
+            
+            <!-- Typing Indicator -->
+            <div class="typing-indicator" id="typingIndicator">
+                <div class="message-avatar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                    </svg>
+                </div>
+                <div class="typing-dots">
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chat Footer -->
+        <div class="chat-footer">
+            <div class="chat-input-wrapper">
+                <input 
+                    type="text" 
+                    class="chat-input" 
+                    id="chatInput" 
+                    placeholder="Type your message..."
+                    autocomplete="off"
+                >
+                <button class="chat-send-btn" id="chatSendBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"/>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Powered By -->
+        <div class="chat-powered">
+            Powered by Cross Border Pay Support
+        </div>
+    </div>
+
+
+      <!-- Minimal Dashboard Footer -->
+<footer class="dashboard-footer">
+  <div class="footer-content">
+    <p class="footer-copyright">© 2025 SuppaPay Cross Border Pay. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <span class="footer-divider">•</span>
+      <a href="terms.html">Terms</a>
+      <span class="footer-divider">•</span>
+      <a href="help.html">Help Center</a>
+      <span class="footer-divider">•</span>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p class="footer-status">
+      <span class="status-indicator"></span>
+      All Systems Operational
+    </p>
+  </div>
+</footer>
+</body>
+</html>
